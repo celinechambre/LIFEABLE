@@ -12,7 +12,7 @@ Life.destroy_all
 
 puts "Creating a user"
 user = User.create!(
-  email: "nina@gmail.com",
+  email: "gina@gmail.com",
   password: "test123"
 )
 
@@ -20,7 +20,7 @@ puts "Creating some lives..."
 10.times do
   life = Life.create!(
     title: Faker::Superhero.name,
-    description: Faker::Hipster.paragraph,
+    description: Faker::Quote.most_interesting_man_in_the_world,
     user: user
     )
   puts "Life with id #{life.id} was created"
