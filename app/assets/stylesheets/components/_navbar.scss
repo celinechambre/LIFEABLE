@@ -14,5 +14,31 @@
 
 .navbar {
 	list-style: none;
-	margin-top: 40px;
+}
+
+.btn {
+  background-color: white;
+  border: solid;
+  border-radius: 20px;
+  margin : 10px;
+  color: white;
+  text-decoration: none;
+  border-radius: 25px;
+  font-family: 'Chakra Petch', sans-serif;
+  font-weight: 700;
+}
+
+.btn:hover {
+  transform: scale(1.2);
+  transition: 0.2s;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #C5283F
+}
+
+a {
+  color: black;
 }
