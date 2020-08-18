@@ -14,6 +14,8 @@
 
 .navbar {
 	list-style: none;
+  // position: fixed; /* Set the navbar to fixed position */
+  // top: 0; /* Position the navbar at the top of the page */
 }
 
 .btn {
@@ -29,7 +31,7 @@
 }
 
 .btn:hover {
-  transform: scale(1.2);
+  transform: scale(1.1);
   transition: 0.2s;
   text-decoration: none;
 }
@@ -41,4 +43,10 @@ a:hover {
 
 a {
   color: black;
+}
+
+img {
+  border-radius: 260px;
+  width: 70px;
+  height: 70px;
 }
