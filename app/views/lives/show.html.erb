@@ -1,0 +1,25 @@
+<div class="life-show">
+  <%= image_tag("https://source.unsplash.com/random", alt:"image", width: 20, height: 300, crop: :fill,  class: "card-img-show") %>
+
+  <div id="life-title">
+    <h1><%= @life.title %></h1>
+  </div>
+	
+  <div id="life-description">
+    <p><%= @life.description %></p>
+  </div>
+
+  <div id="life-details">
+    <p>See below the details of my life:
+      <ul>
+        <li>Save lives</li>
+        <li>Beat vilains</li>
+        <li>Chill on Sundays</li>
+      </ul>
+    </p>
+  </div>
+
+  <button id="book-life"><%= link_to "Book me", lives_path, class: "book-life" %></button>
+  <button id="back-to-list"><%= link_to "Back to list", lives_path, class: "back-to-list" %></button>
+
+</div>
