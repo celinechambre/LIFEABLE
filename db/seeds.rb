@@ -5,3 +5,26 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+require "faker"
+
+puts "Cleaning database..."
+Life.destroy_all
+
+puts "Creating a user"
+user = User.create!(
+  email: "nina@gmail.com",
+  password: "test123"
+)
+
+puts "Creating some lives..."
+10.times do
+  life = Life.create!(
+    title: Faker::Superhero.name,
+    description: Faker::Hipster.paragraph,
+    user: user
+    )
+  puts "Life with id #{life.id} was created"
+
+end
+
+puts "Created #{Life.count} lives"

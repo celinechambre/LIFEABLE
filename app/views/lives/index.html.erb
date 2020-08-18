@@ -1,0 +1,11 @@
+<div class="container">
+  <h1>Find the life you always wanted!</h1>
+
+  <h2>Brose throuch all our lives: </h2>
+  <div><% @lives.each do |life| %>
+      <div> 
+      <%= life.title %> | <%= life.description %>
+      </div>
+    <% end %>
+  </div>
+</div>
