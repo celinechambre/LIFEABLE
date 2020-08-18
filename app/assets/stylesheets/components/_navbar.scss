@@ -14,5 +14,39 @@
 
 .navbar {
 	list-style: none;
-	margin-top: 40px;
+  // position: fixed; /* Set the navbar to fixed position */
+  // top: 0; /* Position the navbar at the top of the page */
+}
+
+.btn {
+  background-color: white;
+  border: solid;
+  border-radius: 20px;
+  margin : 10px;
+  color: white;
+  text-decoration: none;
+  border-radius: 25px;
+  font-family: 'Chakra Petch', sans-serif;
+  font-weight: 700;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+  transition: 0.2s;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #C5283F
+}
+
+a {
+  color: black;
+}
+
+img {
+  border-radius: 260px;
+  width: 70px;
+  height: 70px;
 }
