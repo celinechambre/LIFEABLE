@@ -1,4 +1,5 @@
 class LivesController < ApplicationController
+skip_before_action :authenticate_user!, only: :index
 
   def index
     @lives = Life.all
