@@ -27,11 +27,19 @@ h2 {
 	padding: 20px;
 	font-family: 'Chakra Petch', sans-serif;
 	font-weight: 200;
-	font-weight: 700
+	font-weight: 700;
+	border: none;
+
 }
 
 #home-btn:hover{
   background-color: #6093B6;
   transform: scale(1.2);
   transition: 0.2s;
+}
+
+.white-text,
+.white-text:hover {
+	color: white;
+	text-decoration: none;
 }
