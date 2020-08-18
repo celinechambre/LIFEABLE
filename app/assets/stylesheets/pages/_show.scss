@@ -1,0 +1,58 @@
+.life-show {
+	margin-bottom: 40px;
+}
+
+
+#life-title {
+	margin: 40px;
+	padding-left: 10px;
+	color: #303441;
+}
+
+#life-description {
+	margin: 40px;
+	color: #303441;
+	background-color: #cee1ed;
+	padding: 20px;
+	border-radius: 10px;
+}
+
+#life-details {
+	margin: 40px;
+	color: #303441;
+	background-color: #dbd0a8;
+	padding: 20px;
+	border-radius: 10px;
+}
+
+.card-img-show {
+	width: 100%;
+	position: relative;
+}
+
+.book-life {
+	position: absolute;
+	top: 370px;
+	right: 100px;
+	background-color: #C5283F;
+	color: white;
+	border-radius: 15px;
+    padding: 20px 30px;
+}
+
+.book-life:hover {
+	color: white;
+	text-decoration: none;
+	background-color: #8C2123;
+}
+
+.back-to-list {
+	text-align: right;
+	padding: 15px;
+	color: black;
+	border: none;
+}
+
+#back-to-list {
+	text-align: right;
+}
