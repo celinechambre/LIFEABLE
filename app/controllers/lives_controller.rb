@@ -1,4 +1,6 @@
 class LivesController < ApplicationController
+  before_action :set_life, only: [:show]
+  skip_before_action :authenticate_user!, only: [:index, :show]
 
   def index
     @lives = Life.all
@@ -29,5 +31,9 @@ class LivesController < ApplicationController
 
   def life_params
     params.require(:life).permit(:title, :description)
+  end
+
+   def set_life
+    @life = Life.find(params[:id])
   end
 end
