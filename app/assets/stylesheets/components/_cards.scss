@@ -6,42 +6,17 @@
   position: relative;
 }
 
+.position-relative {
+  position: relative;
+}
+
 .pos-absolute {
   position: absolute;
-  left: 30%; bottom: 10%;
+  left: 10%; bottom: 10%;
 }
 
-.red {
-  background-color: #C5283F !important;
-  border: none !important;
+.position-absolute {
+  position: absolute;
+  right: 3%; top: 4%;
 }
 
-.round-button{
-  min-width: 60px;
-  max-width:120px;
-  text-decoration: none;
-  display: inline-block;
-  outline: none;
-  cursor: pointer;
-  border-style: none;
-  color: white;
-  background-color: #C5283F;
-  border-radius: 100%;
-  overflow: none;
-  text-align: center;
-  padding:0;
-}
-.round-button:before {
-  content:'';
-  display:inline-block;;
-  vertical-align:middle;
-  padding-top:100%;
-}
-span {
-  display:inline-block;
-  vertical-align:middle;
-  max-width: 100%;
-}
-.round-button:active{
-  background-color: #C5283F ;
-}
