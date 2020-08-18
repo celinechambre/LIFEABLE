@@ -15,10 +15,16 @@
       <li class="nav-item">
         <a class="nav-link" href="#">About</a>
       </li>
-
       <li class="nav-item">
-        <a class="nav-link">Sign in</a>
-	  </li>
+        <!-- <a class="nav-link">Sign in</a> -->
+         <%= link_to "Sign in", "/users/sign_in", class: "nav-link" %>
+         <!-- /users/sing_in is poining at views/devise/registrations/new.html.erb-->
+	    </li>
+      <li class="nav-item">
+        <!-- <a class="nav-link">Sign in</a> -->
+         <%= link_to "Sign Up", "/users/sign_up", class: "nav-link" %>
+         <!-- /users/sing_up is poining at views/devise/sessionss/new.html.erb-->
+      </li>
     </ul>
   </div>
 </nav>
