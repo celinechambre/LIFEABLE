@@ -2,9 +2,9 @@ footer {
   background-color: #303441;
   padding: 30px;
   margin-top: 0;
-
   font-size: 0.9em;
   font-family: 'Overpass', sans-serif;
+  height: 145px;
 }
 
 footer-nav {
@@ -34,7 +34,7 @@ social-icons li:last-child {
 .social-icons li a:visited {
   text-decoration: none;
   border: 0;
-  color: #efe2b3;
+  color: #ddd;
   font-weight: 100;
   transition: color 0.2s;
 }
@@ -45,10 +45,9 @@ social-icons li:last-child {
 }
 
 .copyright {
-  color: #efe2b3;
+  color: #ddd;
   font-weight: 100;
   text-align: center;
-  margin-top: 15px;
 }
 .social-icons li a:link,
 .social-icons li a:visited {
