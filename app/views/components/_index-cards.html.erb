@@ -1,19 +1,17 @@
-      
-      
 <div class="d-flex flex-row justify-content-around row row-cols-1 row-cols-md-3"> 
   <% @lives.each do |life| %>
-    <div class="col-md-6 border-0" style="padding: 10px;">
+    <div class="pos-relative col-md-6 border-0" style="padding: 10px;">
       <div class="card bg-light text-white">
         <%= image_tag("https://source.unsplash.com/random", alt:"image", width: 20, height: 300, crop: :fill, class: "card-img-top") %>
-        <div class="card-img-overlay bg-light text-dark col-md-6" style="margin: 40px;">
+        <div class="transparency card-img-overlay bg-primary text-light col-md-6">
           <h2 class="card-title font-weight-bold">
             <%= life.title %>
           </h2>
           <p class="card-text">
             <%= life.description %>
           </p>
-
         </div>
+        <%= link_to '<i class="fas fa-plus"></i>'.html_safe, life_path(life), class:"pos-absolute round-button btn red btn-danger" %>
       </div>
     </div>
   <% end %>
