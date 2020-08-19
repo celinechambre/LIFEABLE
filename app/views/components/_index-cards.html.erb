@@ -7,14 +7,14 @@
           <% else %>
             <%= image_tag("https://source.unsplash.com/random", alt:"image", width: 20, height: 300, crop: :fit, class: "card-img-top") %>
           <% end %>
-          <% if policy(life).create? %>
+          <% if policy(life).edit? %>
             <div class="btn-group position-absolute" role="group">
               <button id="btnGroupDrop1" type="button" class="btn btn-outline-secondary dropdown-toggle no-border" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <i class="fas fa-cog"></i>
               </button>
               <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
-                <a class="dropdown-item" href="#"><%= link_to 'Edit', edit_life_path(life)%></a>
-                <a class="dropdown-item" href="#"><%= link_to 'Delete', lives_path, method: :delete %></a>
+                <%= link_to "Edit", edit_life_path(life), class: "dropdown-item"%>
+                <%= link_to "Delete", lives_path, method: :delete, class:"dropdown-item"%>
               </div>
             </div>
           <% end %> 

@@ -18,13 +18,11 @@
         <a class="nav-link" href="#"><%= link_to "DASHBOARD", lives_path%></a>
       </li>
     </ul>
-      <button class="sign-in-button btn sign" href="users/sign_in"><%= link_to "Sign in", "/users/sign_in"%></button>
-       <button class="sign-in-button btn sign"><%= link_to "Sign Up", "/users/sign_up" %></button>
-
-       <% if current_user %>
-         <button class="sign-in-button btn sign"><%= link_to "Log out", "/users/sign_out", method: :delete %></button>
-       <% end %>
-           
+      <% if user_signed_in? %>
+        <button class="sign-in-button btn sign"><%= link_to "Log out", "/users/sign_out", method: :delete %></button>
+      <% else %>
+        <button class="sign-in-button btn sign" href="users/sign_in"><%= link_to "Sign in", "/users/sign_in"%></button>
+      <% end %>   
   </div>
 </nav>
 
