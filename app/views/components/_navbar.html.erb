@@ -1,23 +1,25 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" ><%= link_to "LIVEABLE", ""%></a>
+
+  <%= link_to (image_tag('Logo Maker 2020_08_19_09_45_39.png')), root_path, class: "logo" %>
+  
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
+    <ul class="navbar-nav mr-auto nav-list">
       <li class="nav-item active">
-        <a class="nav-link" href="#">Lifes <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="#"><%= link_to "LIVES", lives_path%> <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Vision</a>
+        <a class="nav-link" href="#"><%= link_to "VISION", lives_path%></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">User Stories</a>
+        <a class="nav-link" href="#"><%= link_to "DASHBOARD", lives_path%></a>
       </li>
     </ul>
-      <button class="sign-in-button btn" href="users/sign_in"><%= link_to "Sign in", "/users/sign_in"%></button>
-       <button class="sign-in-button btn"><%= link_to "Sign Up", "/users/sign_up" %></button>
+      <button class="sign-in-button btn sign" href="users/sign_in"><%= link_to "Sign in", "/users/sign_in"%></button>
+       <button class="sign-in-button btn sign"><%= link_to "Sign Up", "/users/sign_up" %></button>
   </div>
 </nav>
 

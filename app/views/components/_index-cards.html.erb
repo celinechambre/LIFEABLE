@@ -1,17 +1,17 @@
 <div class="d-flex flex-row justify-content-around row row-cols-md-3 position-relative"> 
   <% @lives.each do |life| %>
     <div class="col-md-6 border-0">
-    <div class="btn-group position-absolute" role="group">
-      <button id="btnGroupDrop1" type="button" class="btn btn-outline-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        <i class="fas fa-cog"></i>
-      </button>
-      <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
-        <a class="dropdown-item" href="#">Edit</a>
-        <a class="dropdown-item" href="#">Delete</a>
-      </div>
-    </div>
       <div class="pos-relative card bg-light text-white"  style="margin-top: 50px;">
         <%= image_tag("https://source.unsplash.com/random", alt:"image", width: 20, height: 300, crop: :fill, class: "card-img-top") %>
+            <div class="btn-group position-absolute" role="group">
+              <button id="btnGroupDrop1" type="button" class="btn btn-outline-secondary dropdown-toggle no-border" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fas fa-cog"></i>
+              </button>
+              <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                <a class="dropdown-item" href="#"></a>
+                <a class="dropdown-item" href="#"></a>
+              </div>
+            </div>
         <div class="transparency card-img-overlay bg-primary text-light col-md-6">
           <h2 class="card-title font-weight-bold">
             <%= life.title %>
@@ -20,7 +20,7 @@
             <%= life.description %>
           </p>
           <p class="card-text font-weight-lighter">
-            created by <%= life.user %>
+            created by <%= life.user.first_name %>
           </p>
         </div>
         <%= link_to "Book now!", life_path(life), class:"text-center pos-absolute btn btn-danger btn-lg" %>

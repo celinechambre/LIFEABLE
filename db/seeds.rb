@@ -9,11 +9,37 @@ require "faker"
 
 puts "Cleaning database..."
 Life.destroy_all
+User.destroy_all
 
 puts "Creating a user"
 user = User.create!(
-  email: "rina@gmail.com",
+  email: "nina@gmail.com",
+  first_name:"Nina"
   password: "test123"
+)
+
+user_two = User.create!(
+  email: "ginast@gmail.com",
+  first_name: "Nina",
+  password: "test123"
+)
+
+user_three = User.create!(
+  email: "binast@gmail.com",
+  first_name: "Tina",
+  password: "test123"
+)
+
+life_one = Life.create!(
+  title: "Superwoman",
+  description: "She is fierce, rich and saves the world. Try it yourself!",
+  user: user_two
+)
+
+life_two = Life.create!(
+  title: "Taylor Swift",
+  description: "Beautiful countrysongs, lives the lifestyle of the rich and famous. Can this be you?",
+  user: user_three
 )
 
 puts "Creating some lives..."
