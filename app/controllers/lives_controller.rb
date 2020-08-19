@@ -3,8 +3,8 @@ class LivesController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
 
   def index
-    # @lives = policy_scope(Life)
-    @lives = Life.all
+    @lives = policy_scope(Life)
+    # @lives = Life.all
     # authorize @lives
   end
 
@@ -36,7 +36,7 @@ class LivesController < ApplicationController
 
   def update
     if @life.update(life_params)
-      redirect_to @life, notice: 'YOur life was successfully updated.'
+      redirect_to @life, notice: 'Your life was successfully updated.'
     else
       render :edit
     end
@@ -55,5 +55,6 @@ class LivesController < ApplicationController
 
    def set_life
     @life = Life.find(params[:id])
+    authorize @life
   end
 end
