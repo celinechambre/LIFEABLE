@@ -8,11 +8,14 @@ class LifePolicy < ApplicationPolicy
   def show?
     true
   end
-  
+
   def new?
     true
   end
 
+  def create?
+    true
+  end
 
   def destroy?
     user_as_owner_or_admin?
