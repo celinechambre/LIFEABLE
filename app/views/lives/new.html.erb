@@ -1,0 +1,13 @@
+<div class="container mt-2 mb-2">
+  <div class="row justify-content-center">
+    <div class="col-6">
+      <p>Hey <%= current_user.first_name.capitalize %> create a life you would like others to book</p>
+      <%= simple_form_for @life do |f| %>
+        <%= f.input :title %>
+        <%= f.input :description %>
+        <%= f.button :submit , "Create Life", class: "btn btn-primary" %>
+      <% end %>
+    </div>
+  </div>
+</div>
+

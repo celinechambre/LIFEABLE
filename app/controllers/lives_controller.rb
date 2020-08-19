@@ -10,14 +10,22 @@ class LivesController < ApplicationController
 
   def create
     @life = Life.new
-    @life.user = current_user
     authorize @life
   end
 
   def new
     @life = Life.new(life_params)
     authorize @life
-    @life.save
+    if @life.save!
+      # Life.create!(title: life_params.title, description: life_params.description, user_id: current_user.id)
+      redirect_to life_path
+    else
+      render :new
+    end
+  end
+
+  def new
+    @life = Life.new
   end
 
   def show
