@@ -1,7 +1,25 @@
 .new_booking {
   align-items: center;
   .date{
-    color: orange;
     padding-top: 10px;
   }
+}
+
+.new_booking {
+h2{
+    margin-top: 20px;
+    color: orange;
+  }
+}
+#home-btn {
+  margin-top: 30px;
+  background-color: #C5283F;
+  color: white;
+  border-radius: 25px;
+  padding: 20px;
+  font-family: 'Chakra Petch', sans-serif;
+  font-weight: 200;
+  font-weight: 700;
+  border: none;
+  margin-bottom: 20px;
 }
