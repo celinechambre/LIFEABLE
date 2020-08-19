@@ -13,14 +13,14 @@ User.destroy_all
 
 puts "Creating a user"
 user = User.create!(
-  email: "linast@gmail.com",
-  first_name: "Sina",
+  email: "nina@gmail.com",
+  first_name:"Nina"
   password: "test123"
 )
 
 user_two = User.create!(
   email: "ginast@gmail.com",
-  first_name: "nina",
+  first_name: "Nina",
   password: "test123"
 )
 
