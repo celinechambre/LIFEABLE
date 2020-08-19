@@ -2,58 +2,68 @@
 	margin-bottom: 40px;
 }
 
-#life-title {
-	margin: 40px;
-	padding-left: 10px;
-	color: #303441;
+.life-show {
+	h1 {
+		margin: 40px;
+		padding-left: 80px;
+		color: #303441;
+	}
 }
 
-#life-description {
-	margin: 40px;
-	color: #303441;
-	background-color: #cee1ed;
-	padding: 20px;
-	border-radius: 10px;
+.life-show {
+	h4 {
+		margin: 40px;
+		color: #303441;
+		border-bottom: 1px solid #d6d6d6;
+		margin: auto 120px;		
+		padding: 20px;
+	}
 }
 
-#life-details {
-	margin: 40px;
-	color: #303441;
-	background-color: #dbd0a8;
-	padding: 20px;
-	border-radius: 10px;
+.life-details {
+		margin: 40px;
+		color: #303441;
+		background-color: white;
+		padding: 20px;
+		border-radius: 10px;
+		margin: 20px 120px;
 }
 
-#img-show {
-	width: 100%;
+.img-show {
+	width: 1200px;
+	height: 500px;
+	display: block;
+    margin: 30px auto;
 	position: relative;
-	border-radius: 0px;
-	height: 300px;
+	border-radius: 8px;
 }
 
 .book-life {
 	position: absolute;
-	top: 370px;
-	right: 100px;
+	top: 550px;
+	right: 150px;
 	background-color: #C5283F;
 	color: white;
-	border-radius: 15px;
-    padding: 20px 30px;
+	opacity: 0.8;
+	font-weight: 600;
+	font-size: 20px;
+	font-family: "Chakra Petch";
+	border-radius: 35px;
+    padding: 30px 40px;
 }
 
 .book-life:hover {
 	color: white;
 	text-decoration: none;
 	background-color: #8C2123;
+	opacity: 1;
 }
 
 .back-to-list {
 	text-align: right;
 	padding: 15px;
-	color: black;
+	color: #303441;
 	border: none;
-}
-
-#back-to-list {
-	text-align: right;
+	font-family: "Chakra Petch";
+	margin-left: 120px ;
 }
