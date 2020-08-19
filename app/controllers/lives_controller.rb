@@ -41,7 +41,7 @@ class LivesController < ApplicationController
 
   def destroy
     @life.destroy!
-    redirect_to lives_url, notice: 'Life was successfully destroyed.'
+    redirect_to lives_path, notice: 'Life was successfully destroyed.'
   end
 
   private
