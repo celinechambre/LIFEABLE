@@ -20,6 +20,11 @@
     </ul>
       <button class="sign-in-button btn sign" href="users/sign_in"><%= link_to "Sign in", "/users/sign_in"%></button>
        <button class="sign-in-button btn sign"><%= link_to "Sign Up", "/users/sign_up" %></button>
+
+       <% if current_user %>
+         <button class="sign-in-button btn sign"><%= link_to "Log out", "/users/sign_out", method: :delete %></button>
+       <% end %>
+           
   </div>
 </nav>
 
