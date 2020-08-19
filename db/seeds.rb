@@ -15,19 +15,25 @@ puts "Creating a user"
 user = User.create!(
   email: "nina@gmail.com",
   first_name:"Nina",
-  password: "test123"
+  password: "test123",
+  last_name: "Snow",
+  username: "titi"
 )
 
 user_two = User.create!(
   email: "ginast@gmail.com",
   first_name: "Nina",
-  password: "test123"
+  password: "test123",
+  last_name: "Snow",
+  username: "toto"
 )
 
 user_three = User.create!(
   email: "binast@gmail.com",
   first_name: "Tina",
-  password: "test123"
+  password: "test123",
+  last_name: "Snow",
+  username: "tutu"
 )
 
 life_one = Life.create!(

@@ -1,2 +1,18 @@
 // Specific CSS for your home-page
 
+.fa-comment {
+	font-size: 200px;
+	margin-left: 800px;
+	padding-bottom: 50px;
+	color: #C5283F;
+	transform: scaleX(-1);
+	position: absolute;
+	top: 10px;
+}
+
+.home-text {
+	p {
+		position: absolute;
+		right: 10px;
+	}
+}
