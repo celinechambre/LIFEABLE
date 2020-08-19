@@ -8,10 +8,19 @@ class BookingsController < ApplicationController
   end
 
   def new
+    @life = Life.find(params[:life_id])
+    set_user
     @booking = Booking.new
   end
 
   def create
+    @life = Life.find(params[:life_id])
+    set_user
+    @booking = Booking.new(booking_params)
+    @booking.life = @life
+    @booking.user = @user
+    @booking.save
+    redirect_to life_path(@life)
   end
 
   private
@@ -21,11 +30,11 @@ class BookingsController < ApplicationController
   end
 
   def set_user
-    @user = User.find(params[:user_id])
+    @user = current_user
   end
 
   def booking_params
     params.require(:booking).permit(:start_date, :end_date)
   end
-  
+
 end

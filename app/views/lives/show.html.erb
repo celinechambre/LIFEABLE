@@ -1,20 +1,16 @@
 <div class="life-show">
-
   <%= image_tag("https://source.unsplash.com/random", alt:"image", class: "img-show") %>
   <h1><%= @life.title %></h1>
 	 <h4><%= @life.description %></h4>
-
    <div class="life-details">
      <p>See below the details of my life:
         <ul>
           <li>Save lives</li>
-          <li>Beat vilains</li>
+          <li>Beat villains</li>
           <li>Chill on Sundays</li>
         </ul>
       </p>
     </div>
-
-  <%= link_to "Book me", lives_path, class: "book-life" %>
+  <%= link_to "Book me", new_life_booking_path(@life), class: "book-life" %>
   <%= link_to "Back to list", lives_path, class: "back-to-list" %>
-
 </div>
