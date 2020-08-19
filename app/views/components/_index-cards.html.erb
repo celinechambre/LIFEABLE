@@ -20,7 +20,7 @@
             <%= life.description %>
           </p>
           <p class="card-text font-weight-lighter">
-            created by <%= life.user %>
+            created by <%= life.user.first_name %>
           </p>
         </div>
         <%= link_to "Book now!", life_path(life), class:"text-center pos-absolute btn btn-danger btn-lg" %>
