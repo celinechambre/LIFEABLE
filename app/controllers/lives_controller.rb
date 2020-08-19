@@ -8,12 +8,12 @@ class LivesController < ApplicationController
     # authorize @lives
   end
 
-  def create
+  def new
     @life = Life.new
     authorize @life
   end
 
-  def new
+  def create
     @life = Life.new(life_params)
     authorize @life
     if @life.save!
@@ -22,10 +22,6 @@ class LivesController < ApplicationController
     else
       render :new
     end
-  end
-
-  def new
-    @life = Life.new
   end
 
   def show
@@ -50,7 +46,7 @@ class LivesController < ApplicationController
   private
 
   def life_params
-    params.require(:life).permit(:title, :description)
+    params.require(:life).permit(:title, :description, :photo)
   end
 
    def set_life
