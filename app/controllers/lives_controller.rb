@@ -7,12 +7,18 @@ class LivesController < ApplicationController
   end
 
   def create
-    @life = Life.new
+    @life = Life.new(life_params)
+    @life.user = current_user
+    if @life.save!
+      # Life.create!(title: life_params.title, description: life_params.description, user_id: current_user.id)
+      redirect_to life_path
+    else
+      render :new
+    end
   end
 
   def new
-    @life = Life.new(life_params)
-    @life.save
+    @life = Life.new
   end
 
   def show
