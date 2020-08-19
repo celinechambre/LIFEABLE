@@ -12,7 +12,7 @@ Life.destroy_all
 
 puts "Creating a user"
 user = User.create!(
-  email: "sinas@gmail.com",
+  email: "nina@gmail.com",
   password: "test123"
 )
 
