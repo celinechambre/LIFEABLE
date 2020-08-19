@@ -18,6 +18,7 @@ class BookingsController < ApplicationController
     @life = Life.find(params[:life_id])
     set_user
     @booking = Booking.new(booking_params)
+    authorize @booking
     @booking.life = @life
     @booking.user = @user
     @booking.save
