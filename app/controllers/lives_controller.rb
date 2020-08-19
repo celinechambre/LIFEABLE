@@ -15,10 +15,11 @@ class LivesController < ApplicationController
 
   def create
     @life = Life.new(life_params)
+    @life.user = current_user
     authorize @life
-    if @life.save!
+    if @life.save! 
       # Life.create!(title: life_params.title, description: life_params.description, user_id: current_user.id)
-      redirect_to life_path
+      redirect_to lives_path
     else
       render :new
     end
@@ -49,8 +50,12 @@ class LivesController < ApplicationController
     params.require(:life).permit(:title, :description, :photo)
   end
 
-   def set_life
+  def set_life
     @life = Life.find(params[:id])
     authorize @life
+  end
+
+  def set_user
+    @user = current_user
   end
 end
