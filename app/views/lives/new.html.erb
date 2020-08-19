@@ -3,8 +3,14 @@
     <div class="col-6">
       <h2 class=“text-center”>Hey <%= current_user.first_name.capitalize %> create a life you would like others to book</h2>
       <%= simple_form_for @life do |f| %>
-        <%= f.input :title %>
-        <%= f.input :description %>
+        <%= f.label :title, "How would you name your life?" %>
+        <%= f.text_field :attribute :title %>
+        <br>
+        <%= f.label :description, "Describe your life shortly!" %>
+        <%= f.text_area :attribute :description %>
+        <br>
+        <%= f.label :photo, "Upload a picture" %>
+        <%= f.input :photo, as: :file %>
         <%= f.button :submit , "Create Life", class: "btn btn-primary" %>
       <% end %>
     </div>
