@@ -4,7 +4,7 @@
   <div id="life-title">
     <h1><%= @life.title %></h1>
   </div>
-	
+
   <div id="life-description">
     <p><%= @life.description %></p>
   </div>
@@ -19,7 +19,7 @@
     </p>
   </div>
 
-  <button id="book-life"><%= link_to "Book me", lives_path, class: "book-life" %></button>
+  <button id="book-life"><%= link_to "Book me",  new_life_booking_path(@life), class: "book-life" %></button>
   <button id="back-to-list"><%= link_to "Back to list", lives_path, class: "back-to-list" %></button>
 
 </div>
