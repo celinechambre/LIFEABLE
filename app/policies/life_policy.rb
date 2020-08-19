@@ -9,16 +9,18 @@ class LifePolicy < ApplicationPolicy
     true
   end
 
-  def edit?
-    user == record.user
-  end
-
   def destroy?
-    user == record.user
+    user_as_owner_or_admin?
   end
 
   def update?
-    user == record.user
+    user_as_owner_or_admin?
+  end
+
+  private
+
+  def user_as_owner_or_admin?
+    user == record.user || user.admin
   end
 
 end
