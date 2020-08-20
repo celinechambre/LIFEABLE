@@ -19,7 +19,7 @@ class LivesController < ApplicationController
     authorize @life
     if @life.save!
       # Life.create!(title: life_params.title, description: life_params.description, user_id: current_user.id)
-      redirect_to lives_path
+      redirect_to life_path(@life)
     else
       render :new
     end
