@@ -1,11 +1,12 @@
 class LivesController < ApplicationController
   before_action :set_life, only: [:show, :edit, :update, :destroy]
   skip_before_action :authenticate_user!, only: [:index, :show]
-
+  skip_after_action :verify_policy_scoped, only: [:index]
+  
   def index
     @lives = policy_scope(Life)
     # @lives = Life.all
-    # authorize @lives
+    authorize @lives
     # if params[:query].present? # part 4 of the job
     #   @lives = Life.where(“title ILIKE ?“, “%#{params[:query]}%“)
     # else
