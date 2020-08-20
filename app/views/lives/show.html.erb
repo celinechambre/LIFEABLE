@@ -13,9 +13,9 @@
   <div class="life-details">
     <p>Things you should know:
       <ul>
-        <li><p><strong>Job:</strong> <%= @life.job %></p></li>
-        <li><p><strong>Lifestyle:</strong> <%= @life.lifestyle %></p></li>
-        <li><p><strong>City:</strong> <%= @life.city %></p></li>
+        <li><p><strong>Job:</strong> <%= @life.job.to_s.capitalize %></p></li>
+        <li><p><strong>Lifestyle:</strong> <%= @life.lifestyle.to_s.capitalize  %></p></li>
+        <li><p><strong>City:</strong> <%= @life.city.to_s.capitalize %></p></li>
       </ul>
     </p>
     </div>
