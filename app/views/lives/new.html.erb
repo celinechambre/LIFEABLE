@@ -1,21 +1,30 @@
 <div class="container mt-2 mb-2">
   <div class="row justify-content-center">
     <div class="col-6">
-      <h2 class=“text-center”>Hey <%= current_user.first_name %> create a life you would like others to book</h2>
-      <%= simple_form_for @life do |f| %>
-        <%= f.label :title, "How would you name your life?" %>
-        <br>
-        <%= f.text_field :title %>
-        <br>
-        <%= f.label :description, "Describe your life shortly!" %>
-        <br>
-        <%= f.text_area :description %>
-        <br>
-        <%= f.label :photo, "Upload a picture" %>
-        <br>
-        <%= f.input :photo, as: :file %>
-        <%= f.button :submit , "Create Life", class: "btn btn-primary" %>
-      <% end %>
+      <form>
+        <h2 class="text-center">Hey <%= current_user.first_name %> create a life you would like others to book</h2>
+        <%= simple_form_for @life do |f| %>
+          <div class="form-group">
+            <label><%= f.label :title, "How would you name your life?" %></label>
+            <input type="text" class="form-control" placeholder="Kim the Berliner">
+          </div>
+          <!-- <br> -->
+          <!-- <%= f.text_field :title %> -->
+          <!-- <br> -->
+          <div class="form-group">
+            <label><%= f.label :description, "Describe your life shortly!" %></label>
+            <!-- <input type="text" class="form-control" placeholder="Hi this is Kim, I am blond, tall and I am on my way to become a developer"> -->
+            <textarea class="form-control" rows="5" placeholder="Hi this is Kim, I am blond, tall and I am on my way to become a developer. I have a couple of very good friends a very nice wardrobe and you should try my life."></textarea>
+          </div>
+          <!-- <br> -->
+          <!-- <%= f.text_area :description %> -->
+          <!-- <br> -->
+          <%= f.label :photo, "Upload a picture" %>
+          <br>
+          <%= f.input :photo, as: :file %>
+          <%= f.button :submit , "Create Life", class: "btn btn-primary" %>
+        <% end %>
+      </form>
     </div>
   </div>
 </div>
