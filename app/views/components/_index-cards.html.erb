@@ -1,11 +1,11 @@
-<div class="d-flex flex-row justify-content-around row row-cols-md-3 position-relative"> 
+<div class="d-flex flex-row justify-content-around row row-cols-md-3 position-relative">
   <% @lives.each do |life| %>
     <div class="col-md-6 border-0">
       <div class="pos-relative card bg-light text-white"  style="margin-top: 20px; margin-bottom: 50px;">
           <% if life.photo.attached? %>
-            <%= cl_image_tag life.photo.key, height: 300, crop: :scale, class: "card-img-top" %>
+            <%= cl_image_tag life.photo.key, height: 300, crop: :fill, class: "card-img-top" %>
           <% else %>
-            <%= image_tag("https://source.unsplash.com/random", alt:"image", height: 300, crop: :scale, class: "card-img-top") %>
+            <%= image_tag("https://source.unsplash.com/random", alt:"image", height: 300, crop: :fit, class: "card-img-top") %>
           <% end %>
           <% if policy(life).edit? %>
             <div class="btn-group position-absolute" role="group">
@@ -17,7 +17,7 @@
                 <%= link_to "❌ Delete", life_path(life), method: :delete, class:"dropdown-item"%>
               </div>
             </div>
-          <% end %> 
+          <% end %>
         <div class="transparency card-img-overlay bg-primary text-light col-md-6">
           <h2 class="card-title font-weight-bold">
             <%= life.title.capitalize %>
