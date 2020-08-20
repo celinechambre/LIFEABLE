@@ -13,9 +13,13 @@
   </head>
 
   <body>
-    <%= render "components/navbar" %>
-    <%= render "devise/shared/alerts" %>
-    <%= yield %>
-    <%= render "components/footer" %>
+     <div id="page-container">
+        <div id="content-wrap">
+          <%= render "components/navbar", background: params[:controller] == "pages" && params[:action] == "home" %>
+          <%= render "devise/shared/alerts" %>
+          <%= yield %>
+      </div>
+      <%= render "components/footer" %>
+    </div>
   </body>
 </html>

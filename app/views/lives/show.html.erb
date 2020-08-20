@@ -1,11 +1,11 @@
 <div class="life-show">
-  <div class="container"> 
+  <div class="img-show">
     <% if @life.photo.attached? %>
-      <%= cl_image_tag @life.photo.key, height: 300, crop: :cover, class: "card-img-top" %>
+      <%= cl_image_tag @life.photo.key, :transformation=>{:width=>1200, :height=>500, :crop=>"fill"} %>
     <% else %>
-      <%= image_tag("https://source.unsplash.com/random", alt:"image", width: 20, height: 300, crop: :fit, class: "card-img-top") %>
+      <%= image_tag("https://source.unsplash.com/random", alt:"image", crop: :fill, height: 500, class: "card-img-top") %>
     <% end %>
-  </div> 
+  </div>
   <h1><%= @life.title %></h1>
 	 <h4><%= @life.description %></h4>
    <div class="life-details">

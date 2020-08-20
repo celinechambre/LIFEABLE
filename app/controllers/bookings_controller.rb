@@ -1,10 +1,15 @@
 class BookingsController < ApplicationController
 
+# skip_before_action :authenticate_user!
   def index
-    @bookings = Booking.all
+    @bookings = policy_scope(Booking)
+    @bookings = current_user.bookings.all
+    # authorize @booking
   end
 
   def show
+    @booking = Booking.find(params[:id])
+    authorize @booking
   end
 
   def new
@@ -22,7 +27,13 @@ class BookingsController < ApplicationController
     @booking.life = @life
     @booking.user = @user
     @booking.save
-    redirect_to life_path(@life)
+    authorize @booking
+    if @booking.save!
+      # Life.create!(title: life_params.title, description: life_params.description, user_id: current_user.id)
+      redirect_to booking_path(@booking)
+    else
+      render :new
+    end
   end
 
   private

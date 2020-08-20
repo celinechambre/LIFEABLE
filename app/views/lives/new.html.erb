@@ -1,21 +1,8 @@
 <div class="container mt-2 mb-2">
   <div class="row justify-content-center">
     <div class="col-6">
-      <h2 class=“text-center”>Hey <%= current_user.first_name %> create a life you would like others to book</h2>
-      <%= simple_form_for @life do |f| %>
-        <%= f.label :title, "How would you name your life?" %>
-        <br>
-        <%= f.text_field :title %>
-        <br>
-        <%= f.label :description, "Describe your life shortly!" %>
-        <br>
-        <%= f.text_area :description %>
-        <br>
-        <%= f.label :photo, "Upload a picture" %>
-        <br>
-        <%= f.input :photo, as: :file %>
-        <%= f.button :submit , "Create Life", class: "btn btn-primary" %>
-      <% end %>
+        <h2 class="text-center">Hey <%= current_user.first_name %> create a life you would like others to book</h2>
+        <%= render "components/life-form" %>
     </div>
   </div>
 </div>

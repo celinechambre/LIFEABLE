@@ -17,6 +17,11 @@ class LifePolicy < ApplicationPolicy
     true
   end
 
+  def edit?
+    user_as_owner_or_admin?
+  end
+
+
   def destroy?
     user_as_owner_or_admin?
   end
@@ -28,7 +33,7 @@ class LifePolicy < ApplicationPolicy
   private
 
   def user_as_owner_or_admin?
-    user == record.user
+    user == record.user || user.admin
   end
 
 end
