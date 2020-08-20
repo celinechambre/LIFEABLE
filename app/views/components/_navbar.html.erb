@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light <%= background ? "transparent" : "normal"%>">
 
   <%= link_to (image_tag('Logo Maker 2020_08_19_09_45_39.png')), root_path, class: "logo" %>
-  
+
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -15,7 +15,7 @@
         <a class="nav-link" href="#"><%= link_to "ADD YOUR LIFE", new_life_path %></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#"><%= link_to "DASHBOARD", lives_path%></a>
+        <a class="nav-link" href="#"><%= link_to "DASHBOARD", bookings_path%></a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#"><%= link_to "USER STORIES", lives_path%></a>
@@ -25,6 +25,6 @@
         <button class="sign-in-button btn sign"><%= link_to "Log out", "/users/sign_out", method: :delete %></button>
       <% else %>
         <button class="sign-in-button btn sign" href="users/sign_in"><%= link_to "Sign in", "/users/sign_in"%></button>
-      <% end %>   
+      <% end %>
   </div>
 </nav>
