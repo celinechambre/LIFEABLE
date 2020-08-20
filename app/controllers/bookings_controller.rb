@@ -37,6 +37,7 @@ class BookingsController < ApplicationController
   end
 
   def destroy
+    # santi was here
     @booking = Booking.find(params[:id])
     authorize @booking
     @booking.destroy!
