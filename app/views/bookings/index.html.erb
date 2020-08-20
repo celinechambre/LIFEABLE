@@ -1,10 +1,13 @@
-<div class="dflex">
-  <br>
+<br>
+<div class="container-dashboard">
   <h1> Hello <%= current_user.first_name.capitalize %>, </h1>
-  <% @bookings.each do |booki| %>
-  <div>
-    <p><strong><%= booki.life.title %> </strong><br> <%= booki.start_date %> until <%= booki.end_date %>
-      <%= link_to "Delete",booking_path(booki) ,method: :delete %></p>
+  <h2>You will change your life to:</h2>
+  <div class="dashboard-card">
+    <% @bookings.each do |booki| %>
+    <div>
+      <strong><%= booki.life.title %> </strong><br> <%= booki.start_date %> until <%= booki.end_date %>
+        <%= link_to "Delete",booking_path(booki) ,method: :delete %>
+    </div>
+    <% end %>
   </div>
-  <% end %>
 </div>
