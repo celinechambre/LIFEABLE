@@ -4,64 +4,68 @@
 
 .life-show {
 	h1 {
-		margin: 40px;
-		padding-left: 80px;
+		margin-top: 80px;
+		margin-left: 120px;
 		color: #303441;
 	}
 }
 
-.life-show {
-	h4 {
+.description {
 		margin: 40px;
 		color: #303441;
 		border-bottom: 1px solid #d6d6d6;
 		margin: auto 120px;		
-		padding: 20px;
-	}
+		padding: 20px 0;
 }
 
 .life-details {
+	    position: absolute;
+	    color: #303441;
+	    top: 150px;
+	    right: 150px;
 		margin: 40px;
-		color: #303441;
 		background-color: white;
-		padding: 20px;
-		border-radius: 10px;
-		margin: 20px 120px;
+		padding: 30px;
+		border-radius: 8px;
+		font-size: 17px;
+		height: 330px;
+		width: 300px;
+		box-shadow: 1px 1px 5px 1px #6093B6;
+		padding: 30px;
 }
 
 .img-show {
 	width: 1200px;
-	height: 500px;
+	height: 450px;
 	display: block;
-  margin: 30px auto;
+  	margin: 30px auto;
 	position: relative;
 	border-radius: 8px;
 }
 
 .book-life {
 	position: absolute;
-	top: 550px;
-	right: 150px;
+	top: 400px;
+	right: 270px;
 	background-color: #C5283F;
 	color: white;
-	opacity: 0.8;
-	font-weight: 600;
+	font-weight: 400;
 	font-size: 20px;
 	font-family: "Chakra Petch";
 	border-radius: 35px;
-    padding: 30px 40px;
+    padding: 25px 30px;
 }
 
 .book-life:hover {
 	color: white;
 	text-decoration: none;
-	background-color: #8C2123;
-	opacity: 1;
+	background-color: #6093B6;
+	transform: scale(1.1);
+	transition: .2s;
 }
 
 .back-to-list {
 	text-align: right;
-	padding: 15px;
 	color: #303441;
 	border: none;
 	font-family: "Chakra Petch";

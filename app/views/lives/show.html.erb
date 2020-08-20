@@ -3,12 +3,15 @@
     <% if @life.photo.attached? %>
       <%= cl_image_tag @life.photo.key, :transformation=>{:width=>1200, :height=>500, :crop=>"fill"} %>
     <% else %>
-      <%= image_tag("https://source.unsplash.com/random", alt:"image", crop: :fill, height: 500, class: "card-img-top") %>
+      <%= image_tag("https://source.unsplash.com/random", alt:"image", crop: :fill, height: 500, class: "card-img-top rounded") %>
     <% end %>
   </div>
 
   <h1><%= @life.title %></h1>
-	<h4><%= @life.description %></h4>
+
+  <div class=description>
+	   <p><%= @life.description %></p>
+  </div>
   
   <div class="life-details">
     <p>Things you should know:
