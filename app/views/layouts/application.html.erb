@@ -13,7 +13,7 @@
   </head>
 
   <body>
-    <%= render "components/navbar" %>
+    <%= render "components/navbar", background: params[:controller] == "pages" && params[:action] == "home" %>
     <%= render "devise/shared/alerts" %>
     <%= yield %>
     <%= render "components/footer" %>
