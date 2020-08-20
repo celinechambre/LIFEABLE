@@ -33,7 +33,7 @@ class LifePolicy < ApplicationPolicy
   private
 
   def user_as_owner_or_admin?
-    user == record.user || user.admin
+    user == record.user
   end
 
 end
