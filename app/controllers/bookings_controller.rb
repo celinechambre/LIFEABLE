@@ -1,8 +1,10 @@
 class BookingsController < ApplicationController
+
 # skip_before_action :authenticate_user!
   def index
+    @bookings = policy_scope(Booking)
     @bookings = current_user.bookings.all
-    authorize @booking
+    # authorize @booking
   end
 
   def show
