@@ -1,0 +1,12 @@
+<%= simple_form_for @life do |f| %>
+  <div class="form-group text-center">
+    <%= f.input :title, label: "How would you name your life?", placeholder: "Kim the Berliner" %>
+  </div>
+  <div class="form-group text-center">
+    <%= f.input :description, label: "Describe your life shortly!", placeholder: "Hi this is Kim, I am blond, tall and I am on my way to become a developer. I have a couple of very good friends a very nice wardrobe and you should try my life.", input_html: {rows: "5"} %>
+  </div>
+  <div class="form-group text-center">
+    <%= f.input :photo, as: :file, label: "Show a bit more of your life!", class: "form-control-file" %>
+    <%= f.button :submit , "Create Life", id: "home-btn", class: "white-text"%>
+  </div>
+<% end %>
