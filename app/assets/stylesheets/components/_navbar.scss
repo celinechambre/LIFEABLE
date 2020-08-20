@@ -1,8 +1,19 @@
+.navbar-lewagon {
+  // [...]
+  background-color: transparent;
+  transition: 0.5s background-color ease;
+}
+
+.navbar-lewagon-white {
+  background-color: white;
+}
+
+
 .navbar {
 	list-style: none;
   top: 0; /* Position the navbar at the top of the page */
   width: 100%; /* Full width */
-  position: relative;
+  position: absolute;
   z-index: 2;
   &.transparent {
     background-color: transparent !important;
@@ -63,4 +74,10 @@
 
 .minus-left {
   left: -100px;
+}
+
+.dropdown-item {
+  padding-left: 20px;
+  border: gray;
+  margin-bottom: 0px;
 }

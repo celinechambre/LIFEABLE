@@ -1,23 +1,31 @@
+
 <nav class="navbar navbar-expand-lg navbar-light bg-light <%= background ? "transparent" : "normal"%>">
+
   <%= link_to (image_tag('Logo Maker 2020_08_19_09_45_39.png')), root_path, class: "logo" %>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto nav-list">
       <li class="nav-item active">
-        <a class="nav-link" href="#"><%= link_to "All LIVES", lives_path%> <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#"><%= link_to "+ ADD A LIFE", new_life_path %></a>
+        <a class="nav-link" href="#"><%= link_to "LIVES", lives_path%> <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#"><%= link_to "USER STORIES", lives_path%></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#"><%= link_to "LIFEGUARDS", lives_path%></a>
       </li>
     </ul>
     <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           <i class="fas fa-user"></i>
         </a>
-        <div class="dropdown-menu minus-left" aria-labelledby="navbarDropdownMenuLink">
+        <div class="dropdown-menu minus-left border border-light" aria-labelledby="navbarDropdownMenuLink">
           <p class="dropdown-item"><%= link_to "My Dashboard", bookings_path%></p>
+          <p class="dropdown-item"><%= link_to "+ Add Your Life", new_life_path%></p>
           <p class="dropdown-item">
             <% if user_signed_in? %>
               <%= link_to "Log out", "/users/sign_out", method: :delete %>
