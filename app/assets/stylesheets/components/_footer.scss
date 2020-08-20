@@ -4,7 +4,10 @@ footer {
   margin-top: 0;
   font-size: 0.9em;
   font-family: 'Overpass', sans-serif;
-  height: 120px;
+  height: 130px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
 
 footer-nav {
@@ -76,5 +79,5 @@ social-icons li:last-child {
 }
 
 .social-icons {
-    margin-right: 30px;
+  margin-right: 30px;
 }
