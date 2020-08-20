@@ -37,8 +37,11 @@ class BookingsController < ApplicationController
   end
 
   def destroy
+    # santi was here
+    @booking = Booking.find(params[:id])
+    authorize @booking
     @booking.destroy!
-    redirect_to lives_path, notice: 'Life was successfully destroyed.'
+    redirect_to bookings_path, notice: 'Booking was successfully destroyed.'
   end
 
   private
