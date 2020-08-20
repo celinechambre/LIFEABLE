@@ -18,6 +18,7 @@
           <%= render "components/navbar", background: params[:controller] == "pages" && params[:action] == "home" %>
           <%= render "devise/shared/alerts" %>
           <%= yield %>
+          <%= render "components/carousel" %>
       </div>
       <%= render "components/footer" %>
     </div>
