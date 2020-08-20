@@ -4,6 +4,16 @@
   </div>
   <h1 class="text-center text-primary" style="padding-bottom: 10px; padding-top: 10px;">Find the life you always wanted!</h1>
   <p class="text-center">Pick a life and book now. You try whatever our lifelords have on offer now. Even superheros need a break from their life every now and then...</p>
+  <!-- [...] -->
+  <%= form_tag lives_path, method: :get do %>
+    <%= text_field_tag :query,
+      params[:query],
+      class: "form-control",
+      placeholder: "Find your new life"
+    %>
+    <%= submit_tag "Search", class: "btn btn-primary" %>
+  <% end %>
+<!-- the list of movies -->
   <%= render "components/index-cards" %>
 </div>
 
