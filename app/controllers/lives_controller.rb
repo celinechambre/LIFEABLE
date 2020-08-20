@@ -47,7 +47,7 @@ class LivesController < ApplicationController
   private
 
   def life_params
-    params.require(:life).permit(:title, :description, :photo)
+    params.require(:life).permit(:title, :description, :photo, :city, :job, :lifestyle)
   end
 
   def set_life
