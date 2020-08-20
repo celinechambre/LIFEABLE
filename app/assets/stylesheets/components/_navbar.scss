@@ -1,11 +1,30 @@
+
+.navbar-lewagon {
+  // [...]
+  background-color: transparent;
+  transition: 0.5s background-color ease;
+}
+
+.navbar-lewagon-white {
+  background-color: white;
+}
+
+
 .navbar {
 	list-style: none;
-  position: sticky; /* Set the navbar to fixed position */
   top: 0; /* Position the navbar at the top of the page */
   width: 100%; /* Full width */
   overflow: hidden;
-  opacity: 0.8;
-  box-shadow: 5px 5px #888888;
+  position: absolute;
+  z-index: 2;
+  &.transparent {
+    background-color: transparent !important;
+  }
+
+  &.normal {
+    background-color: white;
+    position: sticky;
+  }
 }
 
 .sign-in-button {

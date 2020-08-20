@@ -8,11 +8,23 @@
 	transform: scaleX(-1);
 	position: absolute;
 	top: 10px;
+	right: 280px;
+	text-shadow: 2px 3px 5px #303441;
 }
 
-.home-text {
-	p {
-		position: absolute;
-		right: 10px;
-	}
+#bubble-text {
+	position:absolute;
+	color: white;
+	right: 310px;
+	top: 85px;
+	font-size: 30px;
+	font-family: 'Chakra Petch', sans-serif;
+	font-weight: 700;
+}
+
+#bubble-text:hover {
+	color: white;
+	text-decoration: none;
+	transform: scale(1.15);
+	transition: 0.3s;
 }
