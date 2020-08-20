@@ -5,9 +5,9 @@
   <h1 class="text-center text-primary" style="padding-bottom: 10px; padding-top: 10px;">Find the life you always wanted!</h1>
   <p class="text-center">Pick a life and book now. You try whatever our lifelords have on offer now. Even superheros need a break from their life every now and then...</p>
   <!-- [...] -->
-  <%= form_tag lives_path, method: :get do %>
-    <%= text_field_tag :query,
-      params[:query],
+  <%= form_tag lives_path, method: :get do %> <!-- part 3 of the job -->
+    <%= text_field_tag :query, #part 1 of the job
+      params[:query], #part 2 of the job
       class: "form-control",
       placeholder: "Find your new life"
     %>

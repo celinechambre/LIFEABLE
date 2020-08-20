@@ -6,6 +6,19 @@ class LivesController < ApplicationController
     @lives = policy_scope(Life)
     # @lives = Life.all
     # authorize @lives
+
+    # if params[:query].present? # part 4 of the job
+    #   @lives = Life.where("title ILIKE ?", "%#{params[:query]}%")
+    # else
+    #   @lives = Life.all
+    # end
+
+    if params[:query].present?  # part 4 of the job
+      sql_query = "title ILIKE :query OR description ILIKE :query"
+      @lives = Life.where(sql_query, query: "%#{params[:query]}%")
+    else
+      @lives = Life.all
+    end
   end
 
   def new
