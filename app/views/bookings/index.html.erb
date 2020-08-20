@@ -1,8 +1,10 @@
-<div>
+<div class="dflex">
   <br>
   <h1> Hello <%= current_user.first_name.capitalize %>, </h1>
   <% @bookings.each do |booki| %>
-    <p><%= booki.life.title %> <br> <%= booki.start_date %> until <%= booki.end_date %>  |  <%= link_to "Delete", root_path
-   %></p>
+  <div>
+    <p><strong><%= booki.life.title %> </strong><br> <%= booki.start_date %> until <%= booki.end_date %>
+      <%= link_to "Delete",booking_path(booki) ,method: :delete %></p>
+  </div>
   <% end %>
 </div>
