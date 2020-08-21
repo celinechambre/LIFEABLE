@@ -7,5 +7,6 @@ Rails.application.routes.draw do
   end
 
   resources :bookings, only:[:show, :index, :destroy]
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  
+  get "/lifeguards", to: 'pages#lifeguards' # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
