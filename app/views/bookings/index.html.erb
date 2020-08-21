@@ -10,11 +10,15 @@
           <div class="card-writing">
             <strong><%= booki.life.title %></strong>
             <br>
-            <%= booki.start_date %> until <%= booki.end_date %>
+            <%= booki.start_date %>
+            <br>
+            until
+            <br>
+            <%= booki.end_date %>
             <br>
             <br>
             <br>
-            <%= link_to "Delete",booking_path(booki) ,method: :delete %>
+            <%= link_to "❌ Cancel booking",booking_path(booki) ,method: :delete %>
           </div>
           <div class="card-image">
             <%= image_tag("https://source.unsplash.com/random", alt:"image",class: "card-img", style: "max-width: 100%", style: "max-height: 100%") %>
@@ -22,13 +26,37 @@
         </div>
       <% end %>
   <% end %>
-
+<br>
   <div>
-    <h2>Your life has been rented! </h2>
-  <%= @bookingsforlife %>
+    <% if @bookingsforlife.blank? %>
+      <p>You're Life has not been booked yet!</p>
+    <% else %>
+      <h2>Your life has been rented! </h2>
+        <% @bookingsforlife.each do |booking| %>
+          <div class="dashboard-card">
+            <div class="card-writing">
+              <p>
+                <strong><%= booking.user.first_name%> <%= booking.user.last_name%> </strong>
+                <br>
+                has booked your amazing life from
+                <br>
+               <%= booking.start_date%>
+               <br>
+               until
+               <br>
+                <%= booking.end_date%>
+                <br>
+                  <%= link_to "❌ Do not allow that booking ",booking_path(booking) ,method: :delete %>
+              </p>
+              <div class="card-image">
+                <%= image_tag("https://source.unsplash.com/random", alt:"image",class: "card-img", style: "max-width: 100%", style: "max-height: 100%") %>
+              </div>
+          <% end %>
+    <% end %>
   </div>
+</div>
 
-  </div>
+<br>
 
 
 
