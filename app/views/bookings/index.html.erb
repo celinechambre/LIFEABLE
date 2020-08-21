@@ -1,7 +1,7 @@
 <br>
 <div class="container-dashboard ">
   <div>
-    <h1> Hello <%= current_user.first_name.capitalize %>, </h1>
+    <h1> Hello <%= current_user.first_name.titleize %>, </h1>
   </div>
   <div>
       <% if @bookings.blank? %>
@@ -20,7 +20,7 @@
             </div>
             <div class="col-md-8">
               <div class="card-body">
-                <h5 class="card-title"><%= booki.life.title %></h5>
+                <h5 class="card-title"><%= booki.life.title.capitalize %></h5>
                 <p class="card-text"><%= booki.start_date %></p>
                 <p class="card-text"><%= booki.end_date %></p>
                 <p class="card-text"><small class="text-muted"><%= link_to "❌ Cancel booking",booking_path(booki) ,method: :delete %></small></p>
@@ -49,7 +49,7 @@
                 </div>
                 <div class="col-md-8">
                   <div class="card-body">
-                    <h5 class="card-title"><%=booking.user.first_name%> <%= booking.user.last_name%></h5>
+                    <h5 class="card-title"><%=booking.user.first_name.capitalize%> <%= booking.user.last_name.capitalize%></h5>
                     <p class="card-text"><%= booking.start_date%></p>
                     <p class="card-text"><%= booking.end_date%></p>
                     <p class="card-text"><small class="text-muted"><%= link_to "❌ Do not allow that booking ",booking_path(booking) ,method: :delete %></small></p>
