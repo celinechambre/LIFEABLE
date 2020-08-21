@@ -6,7 +6,7 @@
 
 .life-show {
 	h1 {
-		margin-top: 80px;
+		margin-top: 120px;
 		margin-left: 120px;
 		color: #303441;
 	}
@@ -28,17 +28,20 @@
 		margin: 40px;
 		background-color: white;
 		padding: 30px;
-		border-radius: 3px;
+		border-radius: 2px;
 		font-size: 17px;
-		height: 330px;
+		height: 290px;
 		width: 300px;
-		box-shadow: 1px 1px 5px 1px #6093B6;
+		box-shadow: 1px 1px 1px 1px #d3d3d3;
 		padding: 30px;
+		ul {
+			list-style-type: none !important;
+		}
 }
 
 .img-show {
 	width: 1200px;
-	height: 450px;
+	height: 400px;
 	display: block;
   	margin: 30px auto;
 	position: relative;
@@ -48,21 +51,20 @@
 .book-life {
 	position: absolute;
 	top: 400px;
-	right: 270px;
+	right: 200px;
 	background-color: #C5283F;
 	color: white;
 	font-weight: 400;
 	font-size: 20px;
 	font-family: "Chakra Petch";
-	border-radius: 35px;
-    padding: 25px 30px;
+	border-radius: 15px;
+    padding: 20px 100px;
 }
 
 .book-life:hover {
 	color: white;
 	text-decoration: none;
 	background-color: #6093B6;
-	transform: scale(1.1);
 	transition: .2s;
 }
 
