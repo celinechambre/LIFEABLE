@@ -12,11 +12,4 @@
 @import "components/index";
 @import "pages/index";
 
-#page-container {
-  position: relative;
-  min-height: 100vh;
-}
 
-#content-wrap {
-  padding-bottom: 60rem;    /* !!!!Footer height! to be changed in a higher number so that the footer goes below your divs*/
-}
