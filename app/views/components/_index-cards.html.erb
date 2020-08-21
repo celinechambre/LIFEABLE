@@ -3,7 +3,7 @@
     <div class="col-md-6 border-0">
       <div class="pos-relative card bg-light text-white"  style="margin-top: 20px; margin-bottom: 50px;">
           <% if life.photo.attached? %>
-            <%= cl_image_tag life.photo.key, height: 300, crop: :scale, class: "card-img-top" %>
+            <%= cl_image_tag life.photo.key, height: 300, crop: :scale, class: "card-img-top"%>
           <% else %>
             <%= image_tag("https://source.unsplash.com/random", alt:"image", height: 300, crop: :fit, class: "card-img-top") %>
           <% end %>
