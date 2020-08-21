@@ -13,9 +13,9 @@
           <div class="row no-gutters">
             <div class="col-md-4">
               <% if booki.life.photo.attached? %>
-                <%= cl_image_tag booki.life.photo.key, :transformation=>{:crop=>"fill"}, class: "card-img" %>
+                <%= cl_image_tag booki.life.photo.key, class: "card-img" %>
               <% else %>
-                <%= image_tag("https://source.unsplash.com/random", alt:"image", class: "card-img",  crop: :fill) %>
+                <%= image_tag("https://source.unsplash.com/random", alt:"image", class: "card-img") %>
               <% end %>
             </div>
             <div class="col-md-8">
