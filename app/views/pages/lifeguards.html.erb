@@ -2,7 +2,7 @@
   <h1 class="text-center text-primary" style="padding-bottom: 10px; padding-top: 10px;">Our lifeguards</h1>
   <div class="card-deck">
     <div class="card">
-      <%= image_tag("/assets/images/celine.jpg", alt:"image", crop: :fit, class: "card-img-top rounded") %>
+      <img src="<%= asset_path( 'celine.jpg') %>" class="card-img-top" alt="celine">
       <div class="card-body">
         <h5 class="card-title">Celine</h5>
         <p class="card-text">Head of Lives</p>
@@ -10,7 +10,7 @@
       </div>
     </div>
     <div class="card">
-      <%= image_tag("/assets/images/kim.jpeg", alt:"image", class: "card-img-top rounded") %>
+      <img src="<%= asset_path( 'kim.jpeg' ) %>" class="card-img-top" alt="kim">
       <div class="card-body">
         <h5 class="card-title">Kim</h5>
         <p class="card-text">Head of Bookings</p>
@@ -18,7 +18,7 @@
       </div>
     </div>
     <div class="card">
-      <%= image_tag("/assets/images/raffa.png", alt:"image", crop: :fit, class: "card-img-top rounded") %>
+      <img src="<%= asset_path( 'raffa.png' ) %>" class="card-img-top" alt="raffa">
       <div class="card-body">
         <h5 class="card-title">Raffa</h5>
         <p class="card-text">Head of Forms</p>
@@ -26,7 +26,7 @@
       </div>
     </div>
     <div class="card">
-      <%= image_tag("/assets/images/nina.jpg", alt:"image", crop: :fit, class: "card-img-top rounded") %>
+      <img src="<%= asset_path( 'nina.jpg' ) %>" class="card-img-top" alt="nina">
       <div class="card-body">
         <h5 class="card-title">Nina</h5>
         <p class="card-text">Head of Body</p>
