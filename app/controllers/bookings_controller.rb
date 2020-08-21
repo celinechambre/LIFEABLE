@@ -3,12 +3,11 @@ class BookingsController < ApplicationController
 # skip_before_action :authenticate_user!
   def index
     @bookings = policy_scope(Booking)
-    @bookings = current_user.bookings.all
+    # @bookings = current_user.bookings.all
     @life = current_user.lives
     @bookingsforlife = Booking.where(life: @life)
-    @userforbookings = User.find(@bookingsforlife.user_id)
-    raise
-    # authorize @booking
+    # @userforbookings = @bookingsforlife[:user_id]
+    # # authorize @booking
   end
 
   def show

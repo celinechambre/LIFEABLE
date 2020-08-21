@@ -6,29 +6,59 @@
   <% else %>
     <h2>You will change your life to:</h2>
       <% @bookings.each do |booki| %>
-        <div class="dashboard-card">
-          <div class="card-writing">
-            <strong><%= booki.life.title %></strong>
-            <br>
-            <%= booki.start_date %> until <%= booki.end_date %>
-            <br>
-            <br>
-            <br>
-            <%= link_to "Delete",booking_path(booki) ,method: :delete %>
-          </div>
-          <div class="card-image">
-            <%= image_tag("https://source.unsplash.com/random", alt:"image",class: "card-img", style: "max-width: 100%", style: "max-height: 100%") %>
+    <div class="card mb-3" style="max-width: 540px;">
+      <div class="row no-gutters rounded">
+        <div class="col-md-4">
+          <% if booki.life.photo.attached? %>
+            <%= cl_image_tag booki.life.photo.key, :transformation=>{:crop=>"fill"}, class: "card-img" %>
+          <% else %>
+            <%= image_tag("https://source.unsplash.com/random", alt:"image", class: "card-img",  crop: :fill) %>
+          <% end %>
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title"><%= booki.life.title %></h5>
+            <p class="card-text"><%= booki.start_date %></p>
+            <p class="card-text"><%= booki.end_date %></p>
+            <p class="card-text"><small class="text-muted"><%= link_to "❌ Cancel booking",booking_path(booki) ,method: :delete %></small></p>
           </div>
         </div>
-      <% end %>
+      </div>
+    </div>
   <% end %>
+<% end %>
+<br>
 
-  <div>
-    <h2>Your life has been rented! </h2>
-  <%= @bookingsforlife %>
+<div>
+            <% if @bookingsforlife.blank? %>
+              <p>You're Life has not been booked yet!</p>
+            <% else %>
+              <h2>Your life has been rented! </h2>
+                <% @bookingsforlife.each do |booking| %>
+                <div class="card mb-3" style="max-width: 540px;">
+                  <div class="row no-gutters rounded">
+                    <div class="col-md-4">
+                      <% if booking.life.photo.attached? %>
+                        <%= cl_image_tag booking.life.photo.key, :transformation=>{:crop=>"fill"}, class: "card-img" %>
+                      <% else %>
+                        <%= image_tag("https://source.unsplash.com/random", alt:"image", class: "card-img",  crop: :fill) %>
+                      <% end %>
+                    </div>
+                <div class="col-md-8">
+                  <div class="card-body">
+                    <h5 class="card-title"><%=booking.user.first_name%> <%= booking.user.last_name%></h5>
+                    <p class="card-text"><%= booking.start_date%></p>
+                    <p class="card-text"><%= booking.end_date%></p>
+                    <p class="card-text"><small class="text-muted"><%= link_to "❌ Do not allow that booking ",booking_path(booking) ,method: :delete %></small></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          <% end %>
+        <% end %>
+      </div>
+    </div>
   </div>
-
-  </div>
-
+</div>
 
 
