@@ -19,22 +19,21 @@
         <a class="nav-link" href="#"><%= link_to "LIFEGUARDS", lives_path%></a>
       </li>
     </ul>
-    <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <i class="fas fa-user"></i>
-        </a>
-        <div class="dropdown-menu minus-left border border-light" aria-labelledby="navbarDropdownMenuLink">
-          <p class="dropdown-item"><%= link_to "My Dashboard", bookings_path%></p>
-          <p class="dropdown-item"><%= link_to "+ Add Your Life", new_life_path%></p>
-          <p class="dropdown-item">
-            <% if user_signed_in? %>
+    <% if user_signed_in? %>
+      <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fas fa-user"></i>
+          </a>
+          <div class="dropdown-menu minus-left border border-light" aria-labelledby="navbarDropdownMenuLink">
+            <p class="dropdown-item"><%= link_to "My Dashboard", bookings_path%></p>
+            <p class="dropdown-item"><%= link_to "+ Add Your Life", new_life_path%></p>
+            <p class="dropdown-item">
               <%= link_to "Log out", "/users/sign_out", method: :delete %>
-            <% else %>
-              <%= link_to "Log in", "/users/sign_in" %>
-            <% end %>
-          </p>
-          
-        </div>
-      </li>
+            </p>
+    <% else %>
+      <%= link_to "Login", "/users/sign_in", class: "btn btn-danger btn-md rounded-lg chakra-font-button white-text details-btn"%>
+    <% end %>
+          </div>
+        </li>
   </div>
 </nav>
