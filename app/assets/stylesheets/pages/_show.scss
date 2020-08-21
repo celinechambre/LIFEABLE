@@ -1,7 +1,6 @@
 .life-show {
 	margin-bottom: 40px;
-		font-family: "Chakra Petch";
-
+	font-family: "Chakra Petch";
 }
 
 .life-show {
@@ -24,7 +23,7 @@
 	    position: absolute;
 	    color: #303441;
 	    top: 150px;
-	    right: 150px;
+	    right: 140px;
 		margin: 40px;
 		background-color: white;
 		padding: 30px;
@@ -36,29 +35,31 @@
 		padding: 30px;
 		ul {
 			list-style-type: none !important;
+			padding-left: 20px;
 		}
 }
 
-.img-show {
-	width: 1200px;
-	height: 400px;
-	display: block;
-  	margin: 30px auto;
-	position: relative;
-	border-radius: 8px;
+.life-show {
+	.img-show {
+		width: 1200px;
+		height: 400px;
+		display: block;
+	  	margin: 30px auto;
+		position: relative;
+		border-radius: 8px;
+	}
 }
 
 .book-life {
 	position: absolute;
-	top: 400px;
-	right: 200px;
+	top: 390px;
+	right: 198px;
 	background-color: #C5283F;
 	color: white;
 	font-weight: 400;
 	font-size: 20px;
-	font-family: "Chakra Petch";
-	border-radius: 15px;
-    padding: 20px 100px;
+	border-radius: 7px;
+    padding: 20px 90px;
 }
 
 .book-life:hover {
@@ -72,6 +73,5 @@
 	text-align: right;
 	color: #303441;
 	border: none;
-	font-family: "Chakra Petch";
 	margin-left: 120px ;
 }
