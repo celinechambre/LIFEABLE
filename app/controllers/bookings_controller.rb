@@ -4,6 +4,10 @@ class BookingsController < ApplicationController
   def index
     @bookings = policy_scope(Booking)
     @bookings = current_user.bookings.all
+    @life = current_user.lives
+    @bookingsforlife = Booking.where(life: @life)
+    @userforbookings = User.find(@bookingsforlife.user_id)
+    raise
     # authorize @booking
   end
 
