@@ -1,0 +1,20 @@
+<div class="d-flex flex-row justify-content-around row row-cols-md-3">
+  <% @bookings.each do |booki| %>
+    <div class="col-md-6 border-0">
+      <div class=“pos-relative card bg-light text-white”  style=“margin-top: 20px; margin-bottom: 50px;“>
+        <% if booki.life.photo.attached? %>
+          <%= cl_image_tag booki.life.photo.key, class: "card-img" %>
+        <% else %>
+          <%= image_tag("https://source.unsplash.com/random", alt:"image", class: "card-img") %>
+        <% end %>
+        <div class="card-body">
+          <h5 class="card-title"><%= booki.life.title.capitalize %></h5>
+          <p class="card-text"><%= booki.start_date %></p>
+          <p class="card-text"><%= booki.end_date %></p>
+          <p class="card-text"><small class="text-muted"><%= link_to "❌ Cancel booking",booking_path(booki) ,method: :delete %></small></p>
+        </div>
+        </div>
+      </div>
+    </div>
+    <% end %>
+</div>
