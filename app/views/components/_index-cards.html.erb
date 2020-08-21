@@ -1,4 +1,4 @@
-<div class="d-flex flex-row justify-content-around row row-cols-md-3 position-relative">
+<div class="d-flex flex-row justify-content-around row row-cols-md-2 position-relative">
   <% @lives.each do |life| %>
     <div class="col-md-6 border-0">
       <div class="pos-relative card bg-light text-white"  style="margin-top: 20px; margin-bottom: 50px;">
@@ -20,7 +20,7 @@
           <% end %>
         <div class="transparency card-img-overlay bg-primary text-light col-md-6">
           <h2 class="card-title font-weight-bold">
-            <%= life.title.capitalize %>
+            <%= life.title.titleize %>
           </h2>
           <p class="card-text">
             💸 <%= life.job %>
