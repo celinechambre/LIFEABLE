@@ -17,7 +17,7 @@
         <div id="content-wrap">
           <%= render "components/navbar", background: params[:controller] == "pages" && params[:action] == "home" %>
           <%= render "devise/shared/alerts" %>
-          <div style=“min-height: 100vh;“>
+          <div style="min-height: 100vh;">
             <%= yield %>
           </div>
           <%= render "components/carousel" %>
