@@ -17,6 +17,7 @@ footer-nav {
 .social-icons {
   list-style: none;
   float: right;
+  margin-right: 30px;
 }
 
 .footer-nav li,
@@ -77,6 +78,6 @@ social-icons li:last-child {
   transform: scale(1.5)
 }
 
-.social-icons {
-  margin-right: 30px;
-}
+//.social-icons {
+//  margin-right: 30px;
+//}
