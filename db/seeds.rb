@@ -9,9 +9,19 @@ require "faker"
 
 puts "Cleaning database..."
 Life.destroy_all
-# User.destroy_all
+User.destroy_all
 
+puts "Creating some users and some life.."
+puts "..only if they are note commented out in the db:seeds file"
 # puts "Creating a user"
+ user_zero = User.create!(
+   email: "triggiano.n@gmail.com",
+   first_name: "Nicola",
+   password: "123456",
+   last_name: "triggiano",
+   username: "ChicoNico"
+ )
+
 # user = User.create!(
 #   email: "nina@gmail.com",
 #   first_name:"Nina",
