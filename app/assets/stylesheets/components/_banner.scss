@@ -5,8 +5,11 @@
   background-size: cover;
   background-position: bottom;
   height: 100vh;
-  /* padding-left: 50px; */
-  /* padding-top: 60px; */
+  /* padding-left: 50px; TRY TO avoid padding in px */
+  /* padding top and left in % is what is allowing to control the text inside the banner */
+  padding-top: 5%;
+  padding-left: 5%;
+  width: 100%;
 }
 
 .home-text {
