@@ -1,11 +1,28 @@
-<div class="banner">
-  <div class="home-text">
-        <br>
-    <h1>Always having the same life?</h1>
-    <br>
-    <h2>Be whoever you want!</h2>
+<!-- READ THIS -->
+<!-- the overall management of the banner and the text that it contains... -->
+<!-- ...is something that I am working on -->
+<!-- BUT REMEMBER THIS -->
+<!-- the class .banner inside the _banner.scss ...is actually a bit misleading -->
+<!-- the class .banner is the COMBO of IMAGE + TEXT -->
+<!-- so please for now DO NOT TRY to control the behavior of the text outside the class .banner -->
+<!-- also the way the banner has been built still is a huge mess for smaller devices -->
+<!-- reverse engineering this will be a great DEBUGGING/LEARNING experience -->
+<!-- while working on it I discovered that on the HOME PAGE the LOGO in the navbar is bigger than the height of the navbar -->
+<!-- this is not the case for the navbar appearing on other pages...they look big enough actually -->
 
-    <i class="fas fa-comment"></i>
-    <%= link_to "Find a life", lives_path, id: "bubble-text" %>
-  </div>
+
+<div class="banner">
+  <!-- <div class="col justify-content-center"> -->
+    <div class="home-text col-9 mt-5">
+          <!-- <br> -->
+      <div class="row mt-5">
+      <h1>(RaffaV)Always having the same life?</h1>
+      </div>
+      <div class="row">
+      <h2>Be whoever you want!</h2>
+      </div>
+    </div>
+    <!-- <i class="fas fa-comment"></i> -->
+    <%#= link_to "Find a life", lives_path, id: "bubble-text" %>
+  <!-- </div> -->
 </div>

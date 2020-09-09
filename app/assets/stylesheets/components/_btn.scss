@@ -9,10 +9,9 @@
 	font-weight: 200;
 	font-weight: 700;
 	border: none;
-
 }
 
-#home-btn:hover{
+#home-btn:hover {
   background-color: #6093B6;
   // transform: scale(1.2);
   transition: 0.2s;
@@ -42,4 +41,23 @@
 
 .chakra-font-button {
 	font-family: 'Chakra Petch', sans-serif;
+}
+
+.bookings-new-btn {
+   /* used for COPY: "Book now"  */
+  border-radius: 2px !important;
+  padding: 10px 20px;
+  background-color: #C5283F;
+  color: white;
+  margin-top: 30px;
+  font-family: 'Chakra Petch', sans-serif;
+}
+
+.lives-new-btn {
+  /* used for COPY: "Create Life"  */
+  border-radius: 2px !important;
+  padding: 10px 20px;
+  background-color: #C5283F;
+  color: white;
+  font-family: 'Chakra Petch', sans-serif;
 }

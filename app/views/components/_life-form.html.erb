@@ -11,6 +11,7 @@
     <%= f.input :description, label: "Describe your life shortly!", placeholder: "Hi this is Kim, I am blond, tall and I am on my way to become a developer. I have a couple of very good friends a very nice wardrobe and you should try my life.", input_html: {rows: "5"} %>
 
     <%= f.input :photo, as: :file, label: "Show a bit more of your life!", class: "form-control-file" %>
-    <%= f.button :submit , "Create Life", id: "home-btn", class: "white-text"%>
+    <%#= f.button :submit , "Create Life", id: "create-btn", class:"white-text"%>
+    <%= f.button :submit , "Create Life",  class:"white-text lives-new-btn"%>
   </div>
 <% end %>
