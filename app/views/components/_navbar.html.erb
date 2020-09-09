@@ -1,5 +1,11 @@
+<nav class="navbar navbar-expand-lg <%= background ? "transparent" : "normal"%>">
+<!-- in the next comment you will find BG-LIGHT class which represent the style of the navbar as default -->
+<!-- in the APPLICATION.HTML.ERB you will instead find the code that render the style od the navbar in the homepage -->
+<!-- in the navbar class on row 1 of this file I got rid of navbar-light and bg-light -->
+<!-- the backgroundcolor was wired not the backgroundcolor of the navbar is always white except for the homepage -->
+<!-- why is the NAVBAR background color white? becasue in the _navbar.scss there is an &normal section which act thanks to the params action associated in the application.html.erb file -->
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light <%= background ? "transparent" : "normal"%>">
+<!-- <nav class="navbar navbar-expand-lg navbar-light bg-light <%#= background ? "transparent" : "normal"%>">   -->
   <i class="ml-2"><%= link_to (image_tag('Logo Maker 2020_08_19_09_45_39.png')), root_path, class: "logo" %></i>
   <%#= link_to (image_tag('Logo Maker 2020_08_19_09_45_39.png')), root_path, class: "logo" %>
 
