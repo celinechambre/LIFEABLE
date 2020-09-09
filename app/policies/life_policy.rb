@@ -37,3 +37,6 @@ class LifePolicy < ApplicationPolicy
   end
 
 end
+
+# a policy file is meant to PROTECT its own controller
+# in this case the life_policy.rb is meant to protect the lives_controller.rb
