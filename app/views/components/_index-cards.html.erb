@@ -2,9 +2,9 @@
   <% @lives.each do |life| %>
     <div class="col-md-6 border-0">
       <div class="pos-relative card bg-light text-white"  style="margin-top: 20px; margin-bottom: 50px;">
-          <%# if life.photo.attached? %>
-            <%#= cl_image_tag life.photo.key, height: 300, crop: :scale %>
-          <%# else %>
+          <% if life.photo.attached? %>
+            <%= cl_image_tag life.photo.key, height: 300, crop: :scale %>
+          <% else %>
             <%= image_tag("https://source.unsplash.com/random", alt:"image", height: 300, crop: :fit) %>
           <% end %>
           <% if policy(life).edit? %>
