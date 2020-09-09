@@ -72,5 +72,6 @@ puts "..only if they are note commented out in the db:seeds file"
 #   puts "Life with id #{life.id} was created"
 
 # end
+puts "Created #{User.count} users"
+puts "Created #{Life.count} lives"
 
-# puts "Created #{Life.count} lives"
