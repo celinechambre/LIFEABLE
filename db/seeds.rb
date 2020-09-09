@@ -21,7 +21,7 @@ puts "..only if they are note commented out in the db:seeds file"
    last_name: "triggiano",
    username: "ChicoNico",
    admin: true
-   # the ADMIN field has been added to the USER TABLE via a migration.
+   # the ADMIN field has been added to the USER TABLE GITvia a migration.
    # check migration file named ADD_ADMIN_TO_USER
    # check the SCHEMA as well to see the prensence of that FIELD associated to the USER TABLE
  )
