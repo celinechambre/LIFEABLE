@@ -19,7 +19,8 @@ puts "..only if they are note commented out in the db:seeds file"
    first_name: "Nicola",
    password: "123456",
    last_name: "triggiano",
-   username: "ChicoNico"
+   username: "ChicoNico",
+   admin: true
  )
 
 # user = User.create!(
