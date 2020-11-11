@@ -12,12 +12,14 @@
 
 .pos-absolute {
   position: absolute;
-  left: 17%; bottom: 10%;
+  left: 17%;
+  bottom: 10%;
 }
 
 .position-absolute {
   position: absolute;
-  right: 3%; top: 5%;
+  right: 3%;
+  top: 5%;
 }
 
 .no-border {
@@ -26,10 +28,12 @@
 }
 
 .details-btn {
-	border-radius: 2px !important;
-	padding: 10px 20px;
+  border-radius: 2px !important;
+  padding: 10px 20px;
 }
 
 .card-img-top {
-	height: 350px !important;
+  width: 100%;
+  height: 60vh;
+  object-fit: cover;
 }
